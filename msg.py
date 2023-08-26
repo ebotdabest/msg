@@ -81,7 +81,6 @@ def hoster_ui(port):
                 glob_val.connected_addr = addr
                 glob_val.cl = client
                 data = client.recv(1024).decode('utf-8')
-                add_local_message("I am running!")
 
                 if data.lower() == "quit":
                     client.close()
