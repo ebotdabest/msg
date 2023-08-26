@@ -124,6 +124,7 @@ def connector_ui(addr, port):
                 break
             if response == "cn:response_cs_socket":
                 glob_val.cl = sock
+                add_local_message("[ ROOM ACCEPTED THE CONNECTION ]")
             else:
                 add_local_message(f"> {response}")
 
