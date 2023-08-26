@@ -82,6 +82,8 @@ def hoster_ui(port):
                 glob_val.cl = client
                 data = client.recv(1024).decode('utf-8')
 
+
+
                 if data.lower() == "quit":
                     client.close()
                     add_local_message(f"[ {addr} closed connection ]")
@@ -104,6 +106,7 @@ def hoster_ui(port):
         add_local_message("[ ROOM CREATED ]")
 
         while True:
+            add_local_message("I am listening")
             client_message_listen_thread = threading.Thread(target=handle_message)
             client_message_listen_thread.start()
 
